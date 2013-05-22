@@ -2,7 +2,7 @@ USR=dawenl
 
 #Use local bin ahead of system bin
 PATH=/usr/local/bin:$PATH
-
+PATH=/usr/local/share/python:$PATH
 PATH=$PATH:/Users/$USR/bin
 PATH=$PATH:/Applications/MATLAB_R2010a.app/bin
 PATH=$PATH:/usr/texbin
