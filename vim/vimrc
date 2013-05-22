@@ -1,0 +1,42 @@
+version 6.0
+iab Ytag <C-R>=strftime("%Y-%m-%d %T by Dawen Liang <dl2771@columbia.edu>")<CR>
+
+set autoindent
+"set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set showmatch
+set modeline
+set ruler
+set showcmd
+set incsearch
+set encoding=utf-8
+set guifont=Monaco:h12
+set nu
+
+colorscheme molokai 
+
+set showfulltag
+set showmode
+set smartcase
+set imcmdline
+set previewwindow
+set hlsearch
+set rtp+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
+filetype on
+filetype plugin on
+filetype indent on
+
+filetype plugin on
+augroup filetypedetect
+    au! BufNewFile,BufRead *.jemdoc setf jemdoc
+augroup END
+
+" Last line is for proper wrapping of jemdoc lists, etc.
+autocmd Filetype jemdoc setlocal comments=:#,fb:-,fb:.,fb:--,fb:..,fb:\:
+
+call pathogen#incubate() 
+call pathogen#helptags()
