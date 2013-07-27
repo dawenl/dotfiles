@@ -2,10 +2,11 @@ USR=dawenl
 
 #Use local bin ahead of system bin
 PATH=/usr/local/bin:$PATH
-PATH=/usr/local/share/python:$PATH
 PATH=$PATH:/Users/$USR/bin
+PATH=/usr/local/share/python:$PATH
 PATH=$PATH:/Applications/MATLAB_R2010a.app/bin
 PATH=$PATH:/usr/texbin
+PATH=$PATH:/Users/$USR/Documents/julia
 export PATH
 
 #Mail has been disabled (stop it from popping up while using iCal) by:

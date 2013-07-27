@@ -1,42 +1,73 @@
-version 6.0
+set encoding=utf-8
 iab Ytag <C-R>=strftime("%Y-%m-%d %T by Dawen Liang <dl2771@columbia.edu>")<CR>
 
-set autoindent
-"set smartindent
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set showmatch
-set modeline
-set ruler
-set showcmd
-set incsearch
-set encoding=utf-8
-set guifont=Monaco:h12
-set nu
+" Automatic reloading of .vimrc
+autocmd! bufwritepost .vimrc source %
 
-colorscheme molokai 
+" Better paste
+set clipboard=unnamed
 
-set showfulltag
-set showmode
-set smartcase
-set imcmdline
-set previewwindow
-set hlsearch
-set rtp+=$GOROOT/misc/vim
+" Mouse and backspace
+set mouse=a
+set bs=2
+
+" easier moving of code blocks
+vnoremap < <gv
+vnoremap > >gv
+
+" color scheme
+set t_Co=256
+color wombat256mod
+
+" Enable syntax highlighting
+filetype off
 filetype plugin indent on
 syntax on
-filetype on
-filetype plugin on
-filetype indent on
 
-filetype plugin on
+" Show line numbers and length
+set number    " show line numbers
+set tw=80     " width of document
+set nowrap    " don't automatically wrap on load
+set fo-=t     " don't automatically wrap on typing
+set colorcolumn=80
+highlight ColorColumn ctermbg=233
+
+" tab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set shiftround
+set expandtab
+
+" Make search case-insensitive
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" % move to the matching ({[]})
+set showmatch
+set guifont=Monaco:h12
+
+" Pathogen load
+call pathogen#infect()
+call pathogen#incubate() 
+call pathogen#helptags()
+
+" for jemdoc formatting
 augroup filetypedetect
     au! BufNewFile,BufRead *.jemdoc setf jemdoc
 augroup END
-
 " Last line is for proper wrapping of jemdoc lists, etc.
 autocmd Filetype jemdoc setlocal comments=:#,fb:-,fb:.,fb:--,fb:..,fb:\:
 
-call pathogen#incubate() 
-call pathogen#helptags()
+" python-modo flags
+let ropevim_enable_shortcuts = 1
+let g:pymode_folding=0
+let g:pymode_rope_goto_def_newwin = "vnew"
+let g:pymode_rope_extended_complete = 1
+let g:pymode_breakpoint = 0
+let g:pymode_syntax = 1
+let g:pymode_syntax_builtin_objs = 0
+let g:pymode_syntax_builtin_funcs = 0
+map <Leader>b Oimport ipdb; ipdb.set_trace() # XXX BREAKPOINT<C-c>
