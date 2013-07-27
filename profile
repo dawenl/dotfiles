@@ -3,7 +3,6 @@ USR=dawenl
 #Use local bin ahead of system bin
 PATH=/usr/local/bin:$PATH
 PATH=$PATH:/Users/$USR/bin
-PATH=/usr/local/share/python:$PATH
 PATH=$PATH:/Applications/MATLAB_R2010a.app/bin
 PATH=$PATH:/usr/texbin
 PATH=$PATH:/Users/$USR/Documents/julia
