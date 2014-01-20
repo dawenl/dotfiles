@@ -6,6 +6,7 @@ PATH=$PATH:/Users/$USR/bin
 PATH=$PATH:/Applications/MATLAB_R2010a.app/bin
 PATH=$PATH:/usr/texbin
 PATH=$PATH:/Users/$USR/Documents/julia
+PATH=$PATH:/Developer/NVIDIA/CUDA-5.5/bin
 export PATH
 
 #Mail has been disabled (stop it from popping up while using iCal) by:
@@ -27,6 +28,9 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 # Setting the path for Mac Vim
 export VIM_APP_DIR="/Applications"
 
+#DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-5.5/lib
+#export DYLD_LIBRARY_PATH
+
 # Settting PATH for MatEngine
 #export MATLAB=/Applications/MATLAB_R2010a.app
 #mlab_setup()
@@ -37,5 +41,7 @@ export VIM_APP_DIR="/Applications"
 #export SVN_EDITOR=emacs
 
 PYTHONPATH=$PYTHONPATH:/Users/$USR/Documents/librosa/
+PYTHONPATH=/usr/local/lib/python:$PYTHONPATH
 export PYTHONPATH
 
+CUDA_ROOT=/Developer/NVIDIA/CUDA-5.5/
