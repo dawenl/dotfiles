@@ -1,5 +1,5 @@
 set encoding=utf-8
-iab Ytag <C-R>=strftime("%Y-%m-%d %T by Dawen Liang <dl2771@columbia.edu>")<CR>
+iab Ytag <C-R>=strftime("%Y-%m-%d %T by Dawen Liang <dliang@ee.columbia.edu>")<CR>
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
