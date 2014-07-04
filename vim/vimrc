@@ -16,8 +16,12 @@ vnoremap < <gv
 vnoremap > >gv
 
 " color scheme
-set t_Co=256
-color wombat256mod
+set background=dark                                                             
+let g:solarized_termtrans=1                                                     
+let g:solarized_termcolors=256                                                  
+let g:solarized_contrast="high"                                                 
+let g:solarized_visibility="high"                                               
+colorscheme solarized    
 
 " Enable syntax highlighting
 filetype off
@@ -47,7 +51,7 @@ set smartcase
 
 " % move to the matching ({[]})
 set showmatch
-set guifont=Monaco:h12
+set guifont=Monaco:h11
 
 " Pathogen load
 call pathogen#infect()
@@ -64,11 +68,9 @@ autocmd Filetype jemdoc setlocal comments=:#,fb:-,fb:.,fb:--,fb:..,fb:\:
 " python-modo flags
 let ropevim_enable_shortcuts = 1
 let g:pymode_folding=0
-"let g:pymode_rope_goto_def_newwin = "vnew"
-"let g:pymode_rope_extended_complete = 1
-"let g:pymode_breakpoint = 0
 let g:pymode_rope = 0
 let g:pymode_syntax = 1
 let g:pymode_syntax_builtin_objs = 0
 let g:pymode_syntax_builtin_funcs = 0
+
 map <Leader>b Oimport ipdb; ipdb.set_trace() # XXX BREAKPOINT<C-c>

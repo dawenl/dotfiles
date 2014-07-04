@@ -44,4 +44,11 @@ PYTHONPATH=$PYTHONPATH:/Users/$USR/Documents/librosa/
 PYTHONPATH=/usr/local/lib/python:$PYTHONPATH
 export PYTHONPATH
 
+LD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-5.5/lib
+export LD_LIBRARY_PATH
+
 CUDA_ROOT=/Developer/NVIDIA/CUDA-5.5/
+export CUDA_ROOT
+
+# Setting up to use Solarized color scheme in Terminal
+export TERM="xterm-256color"
