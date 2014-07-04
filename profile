@@ -24,22 +24,6 @@ alias mv='mv -i'
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-
-# Setting the path for Mac Vim
-export VIM_APP_DIR="/Applications"
-
-#DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-5.5/lib
-#export DYLD_LIBRARY_PATH
-
-# Settting PATH for MatEngine
-#export MATLAB=/Applications/MATLAB_R2010a.app
-#mlab_setup()
-#{
-#export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$MATLAB/bin/maci64
-#}
-
-#export SVN_EDITOR=emacs
-
 PYTHONPATH=$PYTHONPATH:/Users/$USR/Documents/librosa/
 PYTHONPATH=/usr/local/lib/python:$PYTHONPATH
 export PYTHONPATH
