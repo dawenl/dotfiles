@@ -16,15 +16,20 @@ vnoremap < <gv
 vnoremap > >gv
 
 " color scheme
-set background=dark                                                             
-let g:solarized_termtrans=1                                                     
-let g:solarized_termcolors=256                                                  
-let g:solarized_contrast="high"                                                 
-let g:solarized_visibility="high"                                               
-colorscheme solarized    
+set background=dark
+let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
+colorscheme solarized
 
 " Enable syntax highlighting
 filetype off
+
+" Pathogen load
+execute pathogen#incubate()
+execute pathogen#helptags()
+
 filetype plugin indent on
 syntax on
 
@@ -53,11 +58,6 @@ set smartcase
 set showmatch
 set guifont=Monaco:h11
 
-" Pathogen load
-call pathogen#infect()
-call pathogen#incubate() 
-call pathogen#helptags()
-
 " for jemdoc formatting
 augroup filetypedetect
     au! BufNewFile,BufRead *.jemdoc setf jemdoc
@@ -68,9 +68,11 @@ autocmd Filetype jemdoc setlocal comments=:#,fb:-,fb:.,fb:--,fb:..,fb:\:
 " python-modo flags
 let ropevim_enable_shortcuts = 1
 let g:pymode_folding=0
+"let g:pymode_rope_goto_def_newwin = "vnew"
+"let g:pymode_rope_extended_complete = 1
+"let g:pymode_breakpoint = 0
 let g:pymode_rope = 0
 let g:pymode_syntax = 1
 let g:pymode_syntax_builtin_objs = 0
 let g:pymode_syntax_builtin_funcs = 0
-
 map <Leader>b Oimport ipdb; ipdb.set_trace() # XXX BREAKPOINT<C-c>
