@@ -48,13 +48,11 @@ ZSH_THEME="robbyrussell"
 plugins=(git brew osx pip)
 
 source $ZSH/oh-my-zsh.sh
-source ~/perl5/perlbrew/etc/bashrc
 
 # User configuration
 
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:$PATH
-PATH=$PATH:/Users/dawenl/perl5/perlbrew/bin:/Users/dawenl/perl5/perlbrew/perls/perl-5.16.0/bin
-PATH=$PATH:/Applications/MATLAB_R2010a.app/bin:/usr/texbin:/Users/dawenl/Documents/julia:/usr/local/cuda/bin
+PATH=$PATH:$HOME/Projects/stash/NEBULA/wrapper
 export PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -75,9 +73,10 @@ fi
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Python path
-PYTHONPATH=$PYTHONPATH:/Users/dawenl/Documents/librosa/
 PYTHONPATH=/usr/local/lib/python:$PYTHONPATH
 export PYTHONPATH
+
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 #LD_LIBRARY_PATH=/usr/local/cuda/lib:$LD_LIBRARY_PATH
 #export LD_LIBRARY_PATH
@@ -87,6 +86,9 @@ export DYLD_LIBRARY_PATH
 
 CUDA_ROOT=/usr/local/cuda/
 export CUDA_ROOT
+
+NEBULA_HOME=/Users/dliang/Projects/stash/NEBULA/wrapper
+export NEBULA_HOME
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -99,3 +101,6 @@ alias ll="ls -l"
 alias ls="ls -G"
 alias mv="mv -i"
 alias fuck='sudo $(fc -ln -1)'
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

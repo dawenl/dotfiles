@@ -1,5 +1,5 @@
 set encoding=utf-8
-iab Ytag <C-R>=strftime("%Y-%m-%d %T by Dawen Liang <dliang@ee.columbia.edu>")<CR>
+iab Ytag <C-R>=strftime("%Y-%m-%d %T by Dawen Liang <dliang@netflix.com>")<CR>
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
@@ -27,7 +27,7 @@ colorscheme solarized
 filetype off
 
 " Pathogen load
-execute pathogen#incubate()
+execute pathogen#infect('bundle/{}')
 execute pathogen#helptags()
 
 filetype plugin indent on
